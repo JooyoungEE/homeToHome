@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/succeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_succeed"
+        android:layout_marginTop="114dp"
+        android:layout_marginBottom="893dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="160dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="98dp"
+        android:layout_marginLeft="98dp"
+        android:layout_marginTop="194dp"
+        android:layout_marginRight="98dp"
+        android:layout_marginBottom="806dp"
+        android:fontFamily="@font/genesis_sans_head_global_light"
+        android:gravity="center_horizontal"
+        android:letterSpacing="-0.01"
+        android:lineSpacingExtra="7sp"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="normal"
+        tools:text="홈투홈 예약이 신청되었습니다." />
+
+</LinearLayout>
