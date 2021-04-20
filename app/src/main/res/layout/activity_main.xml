@@ -37,14 +37,13 @@
                     android:layout_marginTop="7dp"
                     android:layout_marginLeft="7dp"
                     android:layout_marginRight="7dp"
-                    android:background="@drawable/radius"
-                    />
+                    android:background="@drawable/radius" />
                 <View
                     android:layout_width="10dp"
                     android:layout_height="10dp"
                     android:layout_marginTop="7dp"
                     android:layout_marginRight="7dp"
-                    android:background="#c3c3c3"/>
+                    android:background="@drawable/triangle"/>
             </LinearLayout>
             <ImageView
                 android:id="@+id/ic_close"
