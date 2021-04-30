@@ -74,7 +74,7 @@
                 android:textSize="25sp"
                 android:textStyle="normal"
                 android:layout_margin="30dp"
-                android:text="홈투홈 예약이 신청되었습니다. " />
+                android:text="홈투홈 예약이\n신청되었습니다. " />
 
             <TextView
                 android:layout_width="wrap_content"
