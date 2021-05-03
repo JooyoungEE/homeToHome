@@ -24,6 +24,7 @@ public class MenuActivity extends AppCompatActivity {
         Button btn_listView = findViewById(R.id.button3);
         Button btn_sharedPreference = findViewById(R.id.button4);
         Button btn_sharedPreference2 = findViewById(R.id.button5);
+        Button btn_memo = findViewById(R.id.button6);
         btn_stopWatch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
@@ -48,6 +49,10 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {openSharedPreference2();}
         });
+        btn_memo.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){openMemo();}
+        });
     }
 
     public void openStopWatchActivity() {
@@ -68,6 +73,10 @@ public class MenuActivity extends AppCompatActivity {
     }
     public void openSharedPreference2(){
         Intent intent = new Intent(getApplicationContext(), SharedPreferenceActivity2.class);
+        startActivity(intent);
+    }
+    public void openMemo(){
+        Intent intent = new Intent(getApplicationContext(), MemoActivity.class);
         startActivity(intent);
     }
 }
