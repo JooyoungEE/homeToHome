@@ -3,6 +3,8 @@ package com.example.hometohome.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.example.hometohome.memo.Memo;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -34,5 +36,13 @@ public class CommonUtil {
     public static void saveString(Context context, String key, String value) {
         SharedPreferences sharedPreferences = context.getSharedPreferences("com.example.hometohome", Context.MODE_PRIVATE);
         sharedPreferences.edit().putString(key, value).commit();
+    }
+
+    /**
+     * SharedPreferences를 이용한 문자열 삭제하기
+     */
+    public static void commitString(Context context){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("com.example.hometohome", Context.MODE_PRIVATE);
+        sharedPreferences.edit().commit();
     }
 }
