@@ -1,4 +1,4 @@
-package com.example.hometohome.memo;
+package com.example.aconmemo.memo;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,15 +7,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.hometohome.R;
+import com.example.aconmemo.R;
 
-import java.io.FilterReader;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
 
 public class MemoAdapter extends BaseAdapter implements Filterable {

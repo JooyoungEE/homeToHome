@@ -1,14 +1,12 @@
-package com.example.hometohome.memo;
+package com.example.aconmemo.memo;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.dynamicanimation.animation.SpringAnimation;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -20,9 +18,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.hometohome.R;
-import com.example.hometohome.util.CommonUtil;
-import com.example.hometohome.util.HangulUtill;
+import com.example.aconmemo.R;
+import com.example.aconmemo.util.CommonUtil;
+import com.example.aconmemo.util.HangulUtill;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -81,6 +79,8 @@ public class MemoActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 notes.remove(itemToDelete);
                                 memoAdapter.setItems(notes);
+                                // 삭제된 메모의 리스트 저장하기
+                                NoteEditorActivity.insert(getApplicationContext(), notes);
                             }
                         }).setNegativeButton("아니요", null).show();
                 return true;
@@ -110,6 +110,8 @@ public class MemoActivity extends AppCompatActivity {
                             newnotes.add(memo);
                         }
                     }
+                }if(search.length() == 0){ //검색어 지우면 원본 데이터 뿌리기
+                    newnotes = notes;
                 }
                 memoAdapter.setItems(newnotes);
             }
@@ -127,16 +129,10 @@ public class MemoActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        CommonUtil.commitString(getApplicationContext());
-    }
-
-    @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == NoteEditorActivity.MEMO_REQUEST_CODE) {/*
-            if (resultCode == RESULT_OK) {
+        if (requestCode == NoteEditorActivity.MEMO_REQUEST_CODE) {
+            /*if (resultCode == RESULT_OK) {
                 memoAdapter.setItems(notes);
             }*/
             memoAdapter.setItems(notes);

@@ -1,7 +1,4 @@
-package com.example.hometohome.memo;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+package com.example.aconmemo.memo;
 
 public class Memo {
 

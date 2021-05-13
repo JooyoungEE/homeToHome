@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".memo.MemoActivity">
 
-    <EditText
-        android:id="@+id/edit_text_filter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="검색어를 입력하세요"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/list_scroll" />
-
     <ScrollView
         android:id="@+id/list_scroll"
         android:layout_width="match_parent"
@@ -34,6 +25,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </ScrollView>
+
+    <EditText
+        android:id="@+id/edit_text_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="검색어를 입력하세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/list_scroll">
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/btn_add_note"

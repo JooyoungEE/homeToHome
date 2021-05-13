@@ -1,26 +1,18 @@
-package com.example.hometohome;
+package com.example.aconmemo;
 
-        import androidx.annotation.NonNull;
         import androidx.appcompat.app.AlertDialog;
         import androidx.appcompat.app.AppCompatActivity;
 
-        import android.annotation.SuppressLint;
         import android.content.DialogInterface;
-        import android.icu.text.UnicodeSetSpanner;
         import android.os.Bundle;
         import android.os.Handler;
         import android.os.Looper;
-        import android.os.Message;
         import android.os.SystemClock;
-        import android.os.TestLooperManager;
-        import android.view.Gravity;
         import android.view.View;
         import android.widget.Button;
         import android.widget.ScrollView;
         import android.widget.TextView;
         import android.widget.Toast;
-
-        import java.util.ArrayList;
 
 public class StopWatchActivity extends AppCompatActivity{
     private ScrollView scrollView;

@@ -1,26 +1,20 @@
-package com.example.hometohome.memo;
+package com.example.aconmemo.memo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.hometohome.R;
-import com.example.hometohome.memo.Memo;
-import com.example.hometohome.memo.MemoActivity;
-import com.example.hometohome.util.CommonUtil;
+import com.example.aconmemo.R;
+import com.example.aconmemo.util.CommonUtil;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class NoteEditorActivity extends AppCompatActivity {
 
@@ -71,22 +65,24 @@ public class NoteEditorActivity extends AppCompatActivity {
 
         EditText editText = findViewById(R.id.editText);
         String text = editText.getText().toString();
-        memo.setMemo(text);
-        memo.setDate(CommonUtil.getTimestamp("yyyy/MM/dd hh:mm"));
-        if (isReg) {
-            MemoActivity.notes.add(memo);
+        if (!TextUtils.isEmpty(text.trim())) {
+            memo.setMemo(text);
+            memo.setDate(CommonUtil.getTimestamp("yyyy/MM/dd hh:mm"));
+            if (isReg) {
+                MemoActivity.notes.add(memo);
+            }
+            // 메모 리스트 저장하기
+            NoteEditorActivity.insert(getApplicationContext(), MemoActivity.notes);
         }
-        // 메모 리스트 저장하기
-        insert(MemoActivity.notes);
     }
 
     /**
      * 메모 리스트 저장하기
      */
-    public void/*int*/ insert(ArrayList<Memo> memos) {
+    public static void/*int*/ insert(Context context, ArrayList<Memo> memos) {
         if (memos != null && !memos.isEmpty()) {
             String JSONString = new Gson().toJson(memos);
-            CommonUtil.saveString(getApplicationContext(), Memo.MEMO_KEY, JSONString);
+            CommonUtil.saveString(context, Memo.MEMO_KEY, JSONString);
         }
     }
 }

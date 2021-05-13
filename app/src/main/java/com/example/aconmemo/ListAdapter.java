@@ -1,22 +1,17 @@
-package com.example.hometohome;
+package com.example.aconmemo;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.hometohome.R;
+import com.example.aconmemo.R;
 
 import java.util.ArrayList;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
 public class ListAdapter extends BaseAdapter {
     private Context context;

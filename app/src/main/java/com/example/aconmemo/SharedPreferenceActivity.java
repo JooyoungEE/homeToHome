@@ -1,4 +1,4 @@
-package com.example.hometohome;
+package com.example.aconmemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 

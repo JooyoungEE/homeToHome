@@ -1,4 +1,4 @@
-package com.example.hometohome;
+package com.example.aconmemo;
 
 import android.content.Context;
 import android.content.SharedPreferences;

@@ -1,4 +1,4 @@
-package com.example.hometohome;
+package com.example.aconmemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.hometohome.memo.MemoActivity;
+import com.example.aconmemo.memo.MemoActivity;
 
 public class MenuActivity extends AppCompatActivity {
     Button button;

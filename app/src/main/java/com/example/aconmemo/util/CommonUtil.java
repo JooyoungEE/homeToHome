@@ -1,9 +1,7 @@
-package com.example.hometohome.util;
+package com.example.aconmemo.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
-import com.example.hometohome.memo.Memo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

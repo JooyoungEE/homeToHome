@@ -1,4 +1,4 @@
-package com.example.hometohome.util;
+package com.example.aconmemo.util;
 
 public class HangulUtill {
     public static final int BEGIN_UNICODE = 44032; //가
