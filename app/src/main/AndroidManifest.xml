@@ -10,23 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.example.aconmemo.memo.NoteEditorActivity"></activity>
-        <activity android:name="com.example.aconmemo.memo.MemoActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name="com.example.aconmemo.memo.MemoActivity" />
         <activity android:name="com.example.aconmemo.SharedPreferenceActivity2" />
         <activity android:name="com.example.aconmemo.ListViewActivity" />
-        <activity android:name="com.example.aconmemo.MenuActivity">
-            <!--
+        <activity android:name="com.example.aconmemo.menu.MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
         </activity>
         <activity android:name="com.example.aconmemo.StopWatchActivity" />
         <activity android:name="com.example.aconmemo.MainActivity" />
