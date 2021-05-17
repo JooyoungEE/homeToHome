@@ -64,7 +64,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder> {
                     Intent intent = new Intent(context, MemoActivity.class);
                     context.startActivity(intent.addFlags(FLAG_ACTIVITY_NEW_TASK));
                 }else if(key.equals("Memo_SQLite")){
-                    Intent intent = new Intent(context, MemoActivity2.class);
+                    Intent intent = new Intent(context, MemoMainActivity.class);
                     context.startActivity(intent.addFlags(FLAG_ACTIVITY_NEW_TASK));
                 }
             }
